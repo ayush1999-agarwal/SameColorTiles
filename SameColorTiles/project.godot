@@ -8,9 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "VBoxContainer",
+"class": "GridColumn",
+"language": "GDScript",
+"path": "res://GridColumn.gd"
+}, {
+"base": "HBoxContainer",
+"class": "GridRow",
+"language": "GDScript",
+"path": "res://GridRow.gd"
+} ]
+_global_script_class_icons={
+"GridColumn": "",
+"GridRow": ""
+}
+
 [application]
 
 config/name="SameColorTiles"
+run/main_scene="res://GameScreen.tscn"
 config/icon="res://icon.png"
 
 [gui]

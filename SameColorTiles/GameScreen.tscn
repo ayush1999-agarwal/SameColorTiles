@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GridController.gd" type="Script" id=1]
+[ext_resource path="res://GridRow.gd" type="Script" id=2]
+[ext_resource path="res://GridColumn.gd" type="Script" id=3]
+
+[sub_resource type="GradientTexture2D" id=1]
+
+[node name="GameScreen" type="Node2D"]
+
+[node name="GridController" type="Node2D" parent="."]
+script = ExtResource( 1 )
+gridSize = 3
+
+[node name="GridRow" type="HBoxContainer" parent="GridController"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 10
+script = ExtResource( 2 )
+
+[node name="GridColumn" type="VBoxContainer" parent="GridController/GridRow"]
+margin_right = 76.0
+margin_bottom = 70.0
+script = ExtResource( 3 )
+
+[node name="GridButton" type="Button" parent="GridController/GridRow/GridColumn"]
+margin_right = 76.0
+margin_bottom = 70.0
+icon = SubResource( 1 )
