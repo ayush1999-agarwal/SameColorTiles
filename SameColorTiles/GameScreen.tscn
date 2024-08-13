@@ -10,6 +10,7 @@
 [node name="GridController" type="Node2D" parent="."]
 script = ExtResource( 1 )
 gridSize = 3
+colorCodes = [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
 
 [node name="GridRow" type="HBoxContainer" parent="GridController"]
 margin_right = 40.0
