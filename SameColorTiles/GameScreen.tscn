@@ -23,7 +23,7 @@ margin_right = 76.0
 margin_bottom = 70.0
 script = ExtResource( 3 )
 
-[node name="GridButton" type="Button" parent="GridController/GridRow/GridColumn"]
+[node name="GridButton_0_0" type="Button" parent="GridController/GridRow/GridColumn"]
 margin_right = 76.0
 margin_bottom = 70.0
 icon = SubResource( 1 )
