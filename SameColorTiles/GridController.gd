@@ -14,4 +14,6 @@ func _ready():
 
 
 func _on_GridButton_pressed(which : Button):
-	print ("Button " + which.name + " was pressed.")
+	var pressedButton : Vector2 = Utils.GetGridButtonFromName(which.name)
+	print ("Button " + str(pressedButton) + " was pressed.")
+	print("Adjacent Buttons: " + str(Utils.GetAdjacentBtns(pressedButton,gridSize)))
