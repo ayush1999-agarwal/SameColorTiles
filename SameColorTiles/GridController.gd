@@ -15,5 +15,9 @@ func _ready():
 
 func _on_GridButton_pressed(which : Button):
 	var pressedButton : Vector2 = Utils.GetGridButtonFromName(which.name)
-	print ("Button " + str(pressedButton) + " was pressed.")
-	print("Adjacent Buttons: " + str(Utils.GetAdjacentBtns(pressedButton,gridSize)))
+	which.modulate = Color(0,0,0,1)
+	
+	var adjacentBtnIds = Utils.GetAdjacentBtns(pressedButton,gridSize)
+	
+	for btnId in adjacentBtnIds:
+		gridRow.get_child(btnId[0]).get_child(btnId[1]).modulate = Color(0,0,0,1)

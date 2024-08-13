@@ -3,8 +3,7 @@
 [ext_resource path="res://GridController.gd" type="Script" id=1]
 [ext_resource path="res://GridRow.gd" type="Script" id=2]
 [ext_resource path="res://GridColumn.gd" type="Script" id=3]
-
-[sub_resource type="GradientTexture2D" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [node name="GameScreen" type="Node2D"]
 
@@ -26,4 +25,4 @@ script = ExtResource( 3 )
 [node name="GridButton_0_0" type="Button" parent="GridController/GridRow/GridColumn"]
 margin_right = 76.0
 margin_bottom = 70.0
-icon = SubResource( 1 )
+icon = ExtResource( 4 )
