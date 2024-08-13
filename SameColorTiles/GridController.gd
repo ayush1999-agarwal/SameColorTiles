@@ -9,6 +9,7 @@ var gridPerBoxState : Array
 var lightColorCount : int
 
 func _ready():
+	randomize()
 	gridRow.AddChildren(gridSize)
 
 	for column in gridRow.get_children():
