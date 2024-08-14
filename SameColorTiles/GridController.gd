@@ -4,13 +4,17 @@ class_name GridController
 export var gridSize : int
 export var colorCodes: Array
 
+onready var gameScreen = $".."
 onready var gridRow : GridRow = $GridRow
 var gridPerBoxState : Array
 var startGridStatePerBox : Array
 var lightColorCount : int
 
 func _ready():
+	#randomize the seed
 	randomize()
+	
+	#Adding multiple columns
 	gridRow.AddChildren(gridSize)
 
 	for column in gridRow.get_children():
@@ -44,6 +48,10 @@ func _generateStartingGrid():
 		gridRow.get_child(i / gridSize).get_child(i % gridSize).modulate = colorCodes[randColorId]
 
 func _on_GridButton_pressed(which : Button):
+	#Increment the movement counter in UI
+	gameScreen.IncMovementVal()
+	
+	#Get button i,j
 	var pressedButton : Vector2 = Utils.GetGridButtonFromName(which.name)
 	_toggleGridBoxColor(pressedButton)
 	
