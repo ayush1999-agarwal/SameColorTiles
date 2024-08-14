@@ -22,7 +22,6 @@ func _ready():
 
 func _positionGrid():
 	#Position the grid at the center of screen horizontally
-	print("Calculated grid length: " + str(gridRow.get_size()))
 	set_position(Vector2(540 - gridRow.get_size().x/2, 100))
 		
 func _generateStartingGrid():
@@ -54,7 +53,7 @@ func _on_GridButton_pressed(which : Button):
 		_toggleGridBoxColor(btnId)
 	
 	if lightColorCount == 0 || lightColorCount == pow(gridSize,2):
-		print("Game Won")
+		SceneLoader.LoadScene(SceneLoader.SCENE_ID.FINISH)
 
 func _toggleGridBoxColor(btnId : Vector2):
 	#Toggle color by getting reverse of what is stored in per box state

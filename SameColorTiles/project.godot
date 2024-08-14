@@ -33,12 +33,13 @@ _global_script_class_icons={
 [application]
 
 config/name="SameColorTiles"
-run/main_scene="res://GameScreen.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Utils="*res://Utils.gd"
+SceneLoader="*res://SceneLoader.gd"
 
 [gui]
 
